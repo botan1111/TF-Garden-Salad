@@ -1,0 +1,90 @@
+@use '../foundation' as *;
+
+.l-header {
+    height: 60px;
+    background-color: $color-gray;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    @include mq(lg) {
+        height: 90px;
+    }
+}
+.l-header_inner {
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    @include mq(lg) {
+        height: 90px;
+        padding: 0 70px 0 30px;
+    }
+}
+
+.l-header_logo {
+    width: 54px;
+
+    @include mq(lg) {
+        width: 116px;
+    }
+}
+
+.l-header_logo_link {
+    @include mq(lg) {
+        transition: opacity 0.3s ease 0s;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.l-header_nav {
+    margin-left: auto;
+}
+
+.l-header_item {
+    display: inline-block;
+    color: $color-white;
+    text-transform: capitalize;
+    @include rem(14);
+
+    @include mq(lg) {
+        font-size: 18px;
+    }
+}
+
+.l-header_item:not(:last-of-type) {
+        margin-right: 18px;
+
+        @include mq(lg) {
+            margin-right: 40px;
+        }
+    }
+
+.l-header_link {
+    @include mq(lg) {
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $color-accent;
+            transition: width 0.3s ease 0s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+@use "../foundation" as *;
+
+.l-footer {
+    background-color: $color-main;
+    padding: 48px 0 10px;
+}
+
+.l-footer_totop {
+    position: fixed;
+    right: 15px;
+    bottom: 309px;
+    z-index: 3;
+    @include mq(lg) {
+        right: 62px;
+        bottom: 269px;
+    }
+}
+
+.l-footer_totop_link {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    @include mq(lg) {
+        width: 120px;
+        height: 120px;
+        transition: opacity 0.3s ease 0s;
+        &:hover {
+            opacity: .7;
+            .l-footer_totop_triangle {
+                border-color: transparent transparent $color-white transparent;
+            }
+        }
+    }
+}
+.l-footer_inner {
+    text-align: center;
+}
+
+.l-footer_sns {
+    margin-top: 7px;
+}
+
+.l-footer_twitter,
+.l-footer_instagram,
+.l-footer_tiktok {
+    display: inline-block;
+    background-color: #2f2f2f;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 0.8em 0;
+    @include mq(lg) {
+        width: 40px;
+        height: 40px;
+        padding: 0.9em 0;
+        transition: background-color 0.3s ease 0s;
+        &:hover {
+            background-color: $color-white;
+            .fab {
+                color: $color-font;
+            }
+        }
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 40px;
+    }
+}
+.l-footer_sns {
+    .fab {
+        color: $color-white;
+        font-size: 35px;
+        @include mq(lg) {
+            font-size: 25px;
+        }
+    }
+}
+
+.l-footer_nav {
+    margin-top: 40px;
+}
+
+.l-footer_list {
+    font-family: $font-family-en;
+}
+
+.l-footer_item {
+    display: inline-block;
+    &:not(:first-of-type) {
+        margin-left: 3.2em;
+        @include mq(lg) {
+            margin-left: 4em;
+        }
+    }
+}
+
+.l-footer_link {
+    @include rem(16);
+    text-transform: capitalize;
+    @include mq(lg) {
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $color-accent;
+            transition: width 0.3s ease 0s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.l-footer_logo {
+    margin: 36px auto 0;
+    width: 166px;
+    @include mq(lg) {
+        transition: opacity 0.3s ease 0s;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.l-footer_copyright {
+    font-size: 12px;
+    margin-top: 30px;
+    letter-spacing: 0.03em;
+    @include mq(lg) {
+        margin-top: 20px;
+    }
+}

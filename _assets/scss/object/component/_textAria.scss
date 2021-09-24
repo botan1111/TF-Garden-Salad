@@ -1,0 +1,10 @@
+@use '../../foundation' as *;
+
+.c-textArea{
+    font-size: 16px;
+    letter-spacing: .05em;
+
+    @include mq(lg){
+        font-size: 18px;
+    }
+}

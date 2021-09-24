@@ -1,0 +1,140 @@
+@use '../foundation' as *;
+
+
+.l-fv {
+    color: $color-white;
+    padding-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+    background: $color-gray url(../../img/fv-sp.png) no-repeat right top 0 / 80%;
+
+    @include mq(sm) {
+        background: $color-gray url(../../img/fv.png) no-repeat right top 0 / 75%;
+        padding-bottom: 112px;
+    }
+}
+
+.l-fv_title {
+    margin-top: 10%;
+    padding-left: 20px;
+
+    @include mq(md) {
+        margin-top: 6%;
+        padding-left: 12.3%;
+    }
+}
+
+.l-fv_title_main {
+    font-family: $font-family-en;
+    @include rem(36);
+    line-height: 1;
+
+    @include mq(md) {
+        font-size: calc(100vw / (1440 / 100));
+    }
+
+    &--lg {
+        text-transform: capitalize;
+    }
+
+    &--color {
+        color: $color-accent;
+    }
+}
+
+.l-fv_title_sub {
+    @include rem(14);
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+
+    @include mq(md) {
+        font-size: calc(100vw / (1440 / 32));
+        margin-top: 50px;
+    }
+
+    span {
+        background-color: $color-accent;
+        display: inline-block;
+        padding: 6px 0;
+        margin-top: 6px;
+
+        @include mq(lg) {
+            margin-top: 23px;
+        }
+        @include mq(xl) {
+            margin-top: 23px;
+        }
+    }
+}
+
+.l-fv_content {
+    text-align: center;
+    margin-top: 18%;
+
+    @include mq(lg) {
+        margin-top: 14.5%;
+    }
+}
+
+.l-fv_content_inner {
+    padding: 0 32px;
+    max-width: 500px;
+
+    @include mq(lg) {
+        max-width: 640px;
+    }
+}
+
+.l-fv_content_main {
+    @include rem(20);
+    font-weight: bold;
+    letter-spacing: 0.06em;
+
+    @include mq(lg) {
+        @include rem(30);
+    }
+}
+
+.l-fv_content_sub {
+    @include mq(lg) {
+        margin-top: 48px;
+    }
+
+    span {
+        display: block;
+        margin-top: 8%;
+
+        @include mq(lg) {
+            margin-top: 4%;
+        }
+    }
+}
+
+.l-fv_background {
+    display: inline-block;
+    font-family: $font-family-en;
+    @include rem(110);
+    letter-spacing: 0.03em;
+    line-height: 0.8;
+    text-align: right;
+    position: absolute;
+    color: rgba(103, 103, 103, 0.3);
+    bottom: -10px;
+    left: 0;
+    @include mq(md) {
+        font-size: calc(100vw / (1440 / 280));
+        left: -3%;
+        letter-spacing: 0;
+    }
+
+    span {
+        display: block;
+
+        @include mq(md) {
+            display: inline;
+        }
+        @include mq(lg) {
+            padding-left: 80px;
+        }
+    }
+}

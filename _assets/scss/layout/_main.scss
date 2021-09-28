@@ -135,23 +135,19 @@ main {
 /*====================================================================================================
 # parallax
 ====================================================================================================*/
-
-.l-main_parallax_salad {
-    height: 248px;
-    background: url("../../img/parallax01.png") right 40% center / cover no-repeat;
-
-    @include mq(md) {
-        height: 450px;
-        background-position-y: 65%;
-    }
-}
-.l-main_parallax_cafe {
+.parallax {
     height: 250px;
-    background: url("../../img/parallax02.png") right 40% center / cover no-repeat;
+    object-fit: cover;
     @include mq(md) {
         height: 450px;
     }
 }
+// .l-main_parallax_salad {
+//     background: url("../../img/parallax01.png") right 40% center / cover no-repeat;
+// }
+// .l-main_parallax_cafe {
+//     background: url("../../img/parallax02.png") right 40% center / cover no-repeat;
+// }
 
 /*====================================================================================================
 # menu
@@ -1140,7 +1136,7 @@ input[type="checkbox"]:checked + span::before {
     line-height: 1.8;
 }
 
-.l-main_contact_error{
+.l-main_contact_error {
     color: red;
 }
 

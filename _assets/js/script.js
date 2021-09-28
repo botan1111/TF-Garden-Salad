@@ -82,3 +82,10 @@ $('#js-form input, #js-form textarea').on('change', function () {
         $submit.prop('disabled', true);
     }
 });
+
+//パララックス
+var image = document.getElementsByClassName('parallax');
+new simpleParallax(image, {
+    delay: 0.8,
+    transition: 'cubic-bezier(0,0,0,1)'
+    });
